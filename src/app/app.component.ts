@@ -5,4 +5,20 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {}
+export class AppComponent {
+  name = '';
+  surname = '';
+  age: number;
+  summary = '';
+
+  isDisable() {
+    return this.name === '' || this.surname === '' || this.age === null;
+  }
+
+  print() {
+    this.summary = `${this.name} - ${this.surname} - ${this.age}`;
+    this.name = '';
+    this.surname = '';
+    this.age = null;
+  }
+}
