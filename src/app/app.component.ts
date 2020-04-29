@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name = '';
   surname = '';
-  age: number;
+  age: number = null;
   summary = '';
 
   isDisable() {
